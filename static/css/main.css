@@ -1,0 +1,44 @@
+.navbar {
+  box-shadow: 2px 2px 5px #000;
+  opacity: 0.9;
+}
+
+.navbar .nav-item .nav-link {
+  color: #fff;
+}
+
+.contact-form{
+  
+  justify-content:center;
+  align-items:center;
+}
+
+
+.price {
+  background-color: rgb(3, 182, 3);
+  cursor: pointer;
+  text-decoration: none;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  border-radius: 6px;
+
+}
+
+.price:hover{
+  background-color: rgb(2, 126, 2);
+}
+
+.price:active{
+  background-color: rgb(2, 126, 2);
+}
+
+.custom-footer{
+  position: fixed;
+  background-color: #343a40 !important;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

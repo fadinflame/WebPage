@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Donate</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/src.ico') }}" type="image/x-icon">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" alt="" loading="lazy">
+        FadinFlame
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+          <a class="nav-item nav-link active" href="{{ url_for('donate') }}">Donate</a>
+          <a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a>
+          <a class="nav-item nav-link" href="{{ url_for('about') }}">About me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--DONATE CARDS -->
+    <section class="text-center">
+      <div class="container p-5">
+        <div class="text-body text-center">
+          <h2>Помочь мне</h2>
+          <p>Вы можете мне материально помочь, если желаете.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 pt-2">
+              <div class="card h-100 ">
+                <div class="card-body">
+                  <img src="{{ url_for('static', filename='img/shava.png') }}" class="img-fluid " width="100">
+                  <p>  
+                  <h3>Shava Man</h3>
+                  </p>
+                  <p>
+                    Деньги мне плати на шаурму. Деньги мне плати. Деньги мне плати. Деньги мне плати.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a style="text-decoration: none;" href="https://qiwi.com/payment/form/99?extra[%27account%27]=+79648744434&amountInteger=140&amountFraction=0&extra[%27comment%27]=donate&currency=643&blocked[0]=account&blocked[1]=comment"><div class="price text-white">140 рублей</div></a>
+              </div>
+              </div>
+            </div>
+
+          <div class="col-lg-4 pt-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <img src="{{ url_for('static', filename='img/coffee.png') }}" class="img-fluid"  width="165">
+                <p>  
+                <h3>Coffee Cup</h3>
+                </p>
+                <p>
+                  Задонать мне на кружку кофе и я стану энергичнее, обещаю
+                </p>
+                
+              </div>
+              <div class="card-footer">
+                <a style="text-decoration: none;" href="https://qiwi.com/payment/form/99?extra[%27account%27]=+79648744434&amountInteger=120&amountFraction=0&extra[%27comment%27]=donate&currency=643&blocked[0]=account&blocked[1]=comment"><div class="price text-white">120 рублей</div></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 pt-2">
+              <div class="card h-100">
+                <div class="card-body">
+                  <img src="{{ url_for('static', filename='img/sotka.png') }}" class="img-fluid ">
+                  <p>  
+                  <h3>Sotka</h3>
+                  </p>
+                  <p>
+                    Закинуть бате сотку
+                  </p>
+                  
+                </div>
+                <div class="card-footer">
+                  <a style="text-decoration: none;" href="https://qiwi.com/payment/form/99?extra[%27account%27]=+79648744434&amountInteger=100&amountFraction=0&extra[%27comment%27]=donate&currency=643&blocked[0]=account&blocked[1]=comment"><div class="price text-white">100 рублей</div></a>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="custom-footer">
+      <div class="container mt-2">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Есть вопросы? Telegram: <a href="tg://resolve?domain=fdnflm">@fdnflm</a></p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+  
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

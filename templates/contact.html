@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/src.ico') }}" type="image/x-icon">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+  </head>
+
+  <body >
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" width="30" height="30" alt="" loading="lazy">
+        FadinFlame
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+          <a class="nav-item nav-link" href="{{ url_for('donate') }}">Donate</a>
+          <a class="nav-item nav-link active" href="{{ url_for('contact') }}">Contact</a>
+          <a class="nav-item nav-link" href="{{ url_for('about') }}">About me</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTACT -->
+    <section class=" text-center">
+      <div class="container">
+          <div class="row ">
+            <form action="/contact" method="POST" class="col-lg-6 offset-lg-3 text-center p-5 m-b-3">
+              <h3>Связь со мной</h3>
+              <p>
+                Хотите связаться со мной?
+              </p>
+    
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-user input-group-text"></i>
+                </div>
+                <input name="username" type="text" class="form-control" placeholder="Имя" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-envelope input-group-text"></i>
+                </div>
+                <input name="contact" type="text" class="form-control" placeholder="Ваш контакт"  aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <i class="fas fa-pencil-alt input-group-text"></i>
+                </div>
+                <textarea name="message" name="" cols="30" rows="10" placeholder="Сообщение" class="form-control"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-dark btn-block">Отправить</button>
+              {% if message %}
+              <h5 class="pt-3">Сообщение отправлено.</h4>
+              {% endif %}
+            </form>
+          </div>
+      </div>
+    </section>
+
+
+    <footer class="custom-footer">
+      <div class="container mt-2">
+        <div class="row text-center text-white">
+          <div class="col ml-auto">
+            <p>Есть вопросы? Telegram: <a href="tg://resolve?domain=fdnflm">@fdnflm</a></p>
+          </div>
+        </div>
+      </div>       
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
